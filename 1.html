@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box</title>
+</head>
+<body>
+<script>
+    function Box($height, $width, $depth, $matherial){
+        this.height=$height;
+        this.width=$width;
+        this.depth=$depth;
+        this.matherial=$matherial;
+       this.volume= function(){
+            var v=this.height*this.width*this.depth;
+            return v;
+
+        }
+        this.equals=function (Object) {
+            if(this.matherial===Object.matherial){
+                document.write("equals");
+
+            }
+           else {
+                document.write("not equals");
+            }
+        }
+
+    }
+    var box1=new Box(10,10,10, 'metal');
+
+    document.write( box1.volume()+"<br>");
+    var box2=new Box(2,3,2,'metall');
+    box2.equals(box1);
+    </script>
+</body>
+</html>

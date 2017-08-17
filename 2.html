@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+<script>
+    var animals={
+        eat:"10",
+        play:"5",
+        sleep:"10"
+    };
+    function Cat(name, color) {
+        this.name=name;
+        this.color=color;
+       // this.weight=function() {
+           //return (int)(this.eat)*(int)(this.sleep)/(int)(this.play);
+         //   return 10;
+       // }
+        //this.toString=function() {
+          //  return this.name+" "+this.color+" "+this.run+" "+ this.weight;
+        //}
+        this.toString=function(){
+            return this.name+"<br> "+ this.color+"<br>";
+        }
+    }
+    Cat.maxWeight=100;
+    Cat.getWeight=function () {
+        var res=this.maxWeight;
+        document.write(res);
+    }
+    Cat.prototype=animals;
+    Cat.prototype.run=function(){
+       return true;
+    }
+    var cat2=new Cat("Iynga","red");
+    document.write(cat2);
+    cat2.getWeight();
+    //document.write(cat2.eat);
+    </script>
+
+</body>
+</html>

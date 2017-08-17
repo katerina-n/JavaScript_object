@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    // function Animals(){
+    var animals={
+        // this.vote=function(){
+        //   document.write("Aaaa");
+        //}
+        //  this.run=function () {
+        //    document.write("Can run");
+        //
+        vote: 'Aaaa',
+        run:'I can run'
+
+    };
+function Human(name, hair, sex) {
+    this.name = name;
+    this.hair = hair;
+    this.sex = sex;
+}
+Human.prototype=animals;
+
+
+
+var ask=prompt("Выберите пол man/woman");
+var ask1=prompt("Выберите цвет волос black/blonde/red");
+if((ask=="man")&&(ask1=="black")) {
+    var man = new Human("Artem","black", "male");
+    document.write("<div style='position: absolute; left: 5.5%; top: 13%'><img style='width: 30%;' src=man.png></div>");
+document.write("<div style='position: absolute;'><img style='width: 150%;' src=black.png></div>");
+document.write("name  "+ man.name+" "+ "hair "+ man.hair+" He has a voice "+ man.vote);
+}
+if((ask=="man")&&(ask1=="blonde")) {
+    var man = new Human("Artem","blonde", "male");
+    document.write("<div style='position: absolute; left: 8%; top: 17%'><img style='width: 30%;' src=man.png></div>");
+    document.write("<div style='position: absolute;'><img style='width: 60%;' src=Blonde.png></div>");
+    document.write("name  "+ man.name+" "+ "hair "+ man.hair+" He has a voice "+ man.vote);
+}
+if((ask=="man")&&(ask1=="red")) {
+    var man = new Human("Artem","red", "male");
+    document.write("<div style='position: absolute; left: 4%; top: 13%'><img style='width: 30%;' src=man.png></div>");
+    document.write("<div style='position: absolute;'><img style='width: 50%;' src=red.png></div>");
+    document.write("name  "+ man.name+" "+ "hair "+ man.hair+" He has a voice "+ man.vote);
+}
+if((ask=="woman")&&(ask1=="black")) {
+    var man = new Human("Lera", "black", "female");
+    document.write("<div style='position: absolute; left: 2%; top: 14%'><img style='width: 30%;' src=woman.png></div>");
+    document.write("<div style='position: absolute;'><img style='width: 135%;' src=black.png></div>");
+    document.write("name  "+ man.name+" "+ "hair "+ man.hair+" She has a voice "+ man.vote);
+}
+if((ask=="woman")&&(ask1=="blonde")) {
+    var man = new Human("Lera", "blonde", "female");
+    document.write("<div style='position: absolute; left: 4.9%; top: 22%'><img style='width: 32%;' src=woman.png></div>");
+    document.write("<div style='position: absolute;'><img style='width: 60%;' src=Blonde.png></div>");
+    document.write("name  "+ man.name+" "+ "hair "+ man.hair+" She has a voice "+ man.vote);
+}
+if((ask=="woman")&&(ask1=="red")) {
+    var man = new Human("Lera","red", "female");
+    document.write("<div style='position: absolute; left: 0.5%; top: 13%'><img style='width: 30%;' src=woman.png></div>");
+    document.write("<div style='position: absolute;'><img style='width: 45%;' src=red.png></div>");
+    document.write("name  "+ man.name+" "+ "hair "+ man.hair+" She has a voice "+ man.vote);
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    function Human($name, $lastname, $age ){
+this.name=$name;
+this.lastname=$lastname;
+this.age=$age;
+    };
+    var a=new Human("Vera", "Ivanova", 10);
+    var b=new Human("Ivan", "Petrov", 33);
+    var c=new Human("Bob", "Sidorov", 44);
+    var d=new Human("Lara", "Frankova", 18);
+    var human=Array();
+    human.push(a,b,c,d);
+
+    function sortMinMax(arr){
+        var c=0;
+for(var i=0; i<=arr.length-2; i++){
+    for(var j=0; j<=arr.length-2-i; j++) {
+        if (arr[j].age >= arr[j + 1].age) {
+            c = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1]= c;
+        }
+
+    }
+
+}
+for(var k=0; k<=arr.length-1; k++){
+    document.write(arr[k].name+" "+arr[k].age+"<br>");
+}
+    }
+    sortMinMax(human);
+    </script>
+
+</body>
+</html>

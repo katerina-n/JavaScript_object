@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    function Cat(name, age, color){
+        this.name=name;
+        this.age=age;
+        this.color=color;
+        this.toString=function(){
+            return "Name: "+this.name+"<br>"+"Age: "+this.age+"<br>"+"Color: "+this.color+"<br>";
+        }
+
+    }
+    var cat=new Cat("Bizon", 4, "red");
+    document.write(cat);
+    </script>
+
+</body>
+</html>
